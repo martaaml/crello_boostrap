@@ -80,7 +80,32 @@ body {
         border-top: 1px solid #e0e0e0;
         border-radius: 0 0 10px 10px;
       }
-/*ESTILO PARA EL CAMPO DE PRECIO*/
+
+      /*Estilo para el boton de registro del incio*/
+      .btn-custom-new {
+        background-color: #FF69B4; 
+        color: white; 
+        font-weight: bold; 
+        padding: 15px 40px; 
+        font-size: 18px;
+        border-radius: 50px;
+        cursor: pointer; /* Cambio de cursor a mano al pasar por encima */
+        transition: all 0.3s ease; /* Efecto de transición suave */
+      }
+      
+      /* Efecto cuando el ratón pasa sobre el botón (hover) */
+      .btn-custom-new:hover {
+        background-color: #FF1493; /* Fondo más oscuro de rosa */
+        color: white; /* Texto más oscuro */  
+        transform: scale(1.1); /* Aumenta el tamaño del botón */
+        box-shadow: 0 4px 12px rgba(255, 255, 255, 0.3); /* Sombra de elevación */
+      }
+      
+      /* Estilo para el foco, para mejorar la accesibilidad */
+      .btn-custom-new:focus {
+        outline: none; /* Elimina el borde de enfoque predeterminado */
+        box-shadow: 10px 10px 10px rgba(255, 20, 147, 0.8); /* Sombra visible al hacer clic en el botón */
+      }
       p.precio{
         font-size: 2rem;
         font-weight: bold;
@@ -745,3 +770,15 @@ footer {
   margin-top: 20px;
 }
 
+/*Color y estilo para el texto inicio*/
+.content-inicio {
+  margin-top: 100px;
+  margin-bottom: 100px;
+  text-align: center;
+  color: black;
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  background-attachment: fixed;
+  background-color: rgba(216, 41, 158, 0.5); /* Fondo magenta con 50% de transparencia */
+}
