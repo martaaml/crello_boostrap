@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRELLO</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/script.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.15.0/Sortable.min.js"></script>
+    <!--CAMBIAR ICONO DEL NAVEGADOR WEB-->
+    <link rel="icon" href="img/logo.png">
+
+</head>
+
+<body>
+
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img src="img/logo.png" alt="logo" width="50" height="50"></a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#servicios">Servicios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#flujo">Flujo de Trabajo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#precios">
+                            <svg viewBox="0 -196 1416 1416" class="icon" version="1.1"
+                                xmlns="http://www.w3.org/2000/svg" fill="#000000" width="50" height="5   30">
+
+                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                <g id="SVGRepo_iconCarrier">
+                                    <path
+                                        d="M324.358919 22.140541H1361.643243c18.819459 0 33.210811 14.391351 33.210811 33.21081v645.396757c0 18.819459-14.391351 33.210811-33.210811 33.210811H324.358919c-18.819459 0-33.210811-14.391351-33.210811-33.210811V55.351351c0-18.819459 14.391351-33.210811 33.210811-33.21081z"
+                                        fill="#9DBE87"></path>
+                                    <path
+                                        d="M1361.643243 756.099459H324.358919c-30.996757 0-55.351351-24.354595-55.351351-55.351351V55.351351c0-30.996757 24.354595-55.351351 55.351351-55.351351H1361.643243c30.996757 0 55.351351 24.354595 55.351352 55.351351v645.396757c0 29.88973-24.354595 55.351351-55.351352 55.351351zM324.358919 44.281081c-6.642162 0-11.07027 4.428108-11.07027 11.07027v645.396757c0 6.642162 4.428108 11.07027 11.07027 11.07027H1361.643243c6.642162 0 11.07027-4.428108 11.070271-11.07027V55.351351c0-6.642162-4.428108-11.07027-11.070271-11.07027H324.358919z"
+                                        fill="#131313"></path>
+                                    <path
+                                        d="M230.261622 116.237838h1038.391351c18.819459 0 33.210811 14.391351 33.210811 33.210811v645.396756c0 18.819459-14.391351 33.210811-33.210811 33.210811H230.261622c-18.819459 0-33.210811-14.391351-33.210811-33.210811V149.448649c0-18.819459 14.391351-33.210811 33.210811-33.210811z"
+                                        fill="#9DBE87"></path>
+                                    <path
+                                        d="M1267.545946 850.196757H230.261622c-30.996757 0-55.351351-24.354595-55.351352-55.351352V149.448649c0-30.996757 24.354595-55.351351 55.351352-55.351352h1038.391351c30.996757 0 55.351351 24.354595 55.351351 55.351352v645.396756c-1.107027 29.88973-25.461622 55.351351-56.458378 55.351352zM230.261622 138.378378c-6.642162 0-11.07027 4.428108-11.070271 11.070271v645.396756c0 6.642162 4.428108 11.07027 11.070271 11.070271h1038.391351c6.642162 0 11.07027-4.428108 11.07027-11.070271V149.448649c0-6.642162-4.428108-11.07027-11.07027-11.070271H230.261622z"
+                                        fill="#131313"></path>
+                                    <path
+                                        d="M143.913514 208.121081h1038.391351c18.819459 0 33.210811 14.391351 33.210811 33.210811v645.396757c0 18.819459-14.391351 33.210811-33.210811 33.21081H143.913514c-18.819459 0-33.210811-14.391351-33.210811-33.21081V241.331892c0-17.712432 14.391351-33.210811 33.210811-33.210811z"
+                                        fill="#9DBE87"></path>
+                                    <path
+                                        d="M1182.304865 942.08H143.913514c-30.996757 0-55.351351-24.354595-55.351352-55.351351V241.331892c0-30.996757 24.354595-55.351351 55.351352-55.351351h1038.391351c30.996757 0 55.351351 24.354595 55.351351 55.351351v645.396757c0 29.88973-25.461622 55.351351-55.351351 55.351351zM143.913514 230.261622c-6.642162 0-11.07027 4.428108-11.070271 11.07027v645.396757c0 6.642162 4.428108 11.07027 11.070271 11.07027h1038.391351c6.642162 0 11.07027-4.428108 11.07027-11.07027V241.331892c0-6.642162-4.428108-11.07027-11.07027-11.07027H143.913514z"
+                                        fill="#131313"></path>
+                                    <path
+                                        d="M55.351351 290.041081h1038.391352c18.819459 0 33.210811 14.391351 33.210811 33.210811v645.396757c0 18.819459-14.391351 33.210811-33.210811 33.21081H55.351351c-18.819459 0-33.210811-14.391351-33.21081-33.21081V323.251892c0-17.712432 14.391351-33.210811 33.21081-33.210811z"
+                                        fill="#9DBE87"></path>
+                                    <path
+                                        d="M1093.742703 1024H55.351351c-30.996757 0-55.351351-24.354595-55.351351-55.351351V323.251892c0-30.996757 24.354595-55.351351 55.351351-55.351351h1038.391352c30.996757 0 55.351351 24.354595 55.351351 55.351351v645.396757c0 30.996757-25.461622 55.351351-55.351351 55.351351zM55.351351 312.181622c-6.642162 0-11.07027 4.428108-11.07027 11.07027v645.396757c0 6.642162 4.428108 11.07027 11.07027 11.07027h1038.391352c6.642162 0 11.07027-4.428108 11.07027-11.07027V323.251892c0-6.642162-4.428108-11.07027-11.07027-11.07027H55.351351z"
+                                        fill="#131313"></path>
+                                    <path
+                                        d="M954.257297 902.227027H194.836757c0-52.03027-43.174054-95.204324-95.204325-95.204324V472.700541c52.03027 0 95.204324-43.174054 95.204325-95.204325h759.42054c0 52.03027 43.174054 95.204324 95.204325 95.204325v334.322162c-53.137297 0-95.204324 43.174054-95.204325 95.204324z"
+                                        fill="#D6F0C5"></path>
+                                    <path
+                                        d="M954.257297 924.367568H194.836757c-12.177297 0-22.140541-9.963243-22.140541-22.140541 0-39.852973-33.210811-73.063784-73.063784-73.063784-12.177297 0-22.140541-9.963243-22.14054-22.14054V472.700541c0-12.177297 9.963243-22.140541 22.14054-22.140541 39.852973 0 73.063784-33.210811 73.063784-73.063784 0-12.177297 9.963243-22.140541 22.140541-22.14054h759.42054c12.177297 0 22.140541 9.963243 22.140541 22.14054 0 39.852973 33.210811 73.063784 73.063784 73.063784 12.177297 0 22.140541 9.963243 22.14054 22.140541v334.322162c0 12.177297-9.963243 22.140541-22.14054 22.14054-39.852973 0-73.063784 33.210811-73.063784 73.063784 0 12.177297-9.963243 22.140541-22.140541 22.140541z m-739.494054-44.281082h718.460541c8.856216-46.495135 46.495135-84.134054 92.99027-92.99027V492.627027c-46.495135-8.856216-84.134054-46.495135-92.99027-92.99027H214.763243c-8.856216 46.495135-46.495135 84.134054-92.99027 92.99027V785.989189c46.495135 9.963243 84.134054 47.602162 92.99027 94.097297z"
+                                        fill="#131313"></path>
+                                    <path
+                                        d="M576.761081 790.417297c-35.424865 0-73.063784-13.284324-99.632432-47.602162-7.749189-9.963243-5.535135-23.247568 3.321081-30.996757 9.963243-7.749189 23.247568-5.535135 30.996756 3.321081 26.568649 34.317838 67.528649 35.424865 94.097298 26.568649 22.140541-7.749189 35.424865-22.140541 35.424865-37.638919 0-14.391351-34.317838-24.354595-64.207568-33.210811-46.495135-14.391351-105.167568-30.996757-105.167567-86.348108 0-26.568649 16.605405-50.923243 45.388108-65.314594 35.424865-17.712432 95.204324-24.354595 151.662702 16.605405 9.963243 7.749189 12.177297 21.033514 4.428108 30.996757-7.749189 9.963243-21.033514 12.177297-30.996756 4.428108-37.638919-27.675676-79.705946-26.568649-105.167568-13.284324-13.284324 6.642162-22.140541 16.605405-22.14054 26.568648 0 21.033514 30.996757 30.996757 73.063783 44.281081 45.388108 13.284324 95.204324 28.782703 95.204325 75.277838 0 34.317838-25.461622 65.314595-65.314595 79.705946-11.07027 3.321081-26.568649 6.642162-40.96 6.642162z"
+                                        fill="#131313"></path>
+                                    <path
+                                        d="M574.547027 549.085405c-12.177297 0-22.140541-9.963243-22.140541-22.14054v-48.709189c0-12.177297 9.963243-22.140541 22.140541-22.140541s22.140541 9.963243 22.140541 22.140541v48.709189c0 13.284324-9.963243 22.140541-22.140541 22.14054z"
+                                        fill="#131313"></path>
+                                    <path
+                                        d="M574.547027 832.484324c-12.177297 0-22.140541-9.963243-22.140541-22.14054v-36.531892c0-12.177297 9.963243-22.140541 22.140541-22.140541s22.140541 9.963243 22.140541 22.140541v36.531892c0 12.177297-9.963243 22.140541-22.140541 22.14054z"
+                                        fill="#131313"></path>
+                                    <path
+                                        d="M285.612973 653.145946m-40.96 0a40.96 40.96 0 1 0 81.92 0 40.96 40.96 0 1 0-81.92 0Z"
+                                        fill="#AECD99"></path>
+                                    <path
+                                        d="M285.612973 715.139459c-34.317838 0-63.100541-27.675676-63.100541-63.10054s27.675676-63.100541 63.100541-63.100541c34.317838 0 63.100541 27.675676 63.100541 63.100541s-28.782703 63.100541-63.100541 63.10054z m0-80.812973c-9.963243 0-18.819459 7.749189-18.819459 18.81946s7.749189 18.819459 18.819459 18.819459c9.963243 0 18.819459-7.749189 18.819459-18.819459s-8.856216-18.819459-18.819459-18.81946z"
+                                        fill="#131313"></path>
+                                    <path
+                                        d="M865.695135 653.145946m-40.96 0a40.96 40.96 0 1 0 81.92 0 40.96 40.96 0 1 0-81.92 0Z"
+                                        fill="#AECD99"></path>
+                                    <path
+                                        d="M865.695135 715.139459c-34.317838 0-63.100541-27.675676-63.10054-63.10054s27.675676-63.100541 63.10054-63.100541c34.317838 0 63.100541 27.675676 63.100541 63.100541s-28.782703 63.100541-63.100541 63.10054z m0-80.812973c-9.963243 0-18.819459 7.749189-18.819459 18.81946s7.749189 18.819459 18.819459 18.819459 18.819459-7.749189 18.81946-18.819459-8.856216-18.819459-18.81946-18.81946z"
+                                        fill="#131313"></path>
+                                </g>
+                            </svg></a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contacto">
+                            <svg fill="#DF8AAC" viewBox="0 0 64 64" version="1.1" xml:space="preserve"
+                                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                stroke="#DF8AAC" width="50" height="50">
+                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                <g id="SVGRepo_iconCarrier">
+                                    <g id="_x31_6_laptop">
+                                        <g>
+                                            <path
+                                                d="M62.6738,49.8809c-0.4111-0.584-1.1523-0.9614-1.8877-0.9614H60.061V17.2261c0-1.7427-1.4194-3.1606-3.1641-3.1606 H45.8047v-3.0996c0-2.084-1.6953-3.7798-3.7793-3.7798H20.855c-2.0859,0-3.7832,1.6958-3.7832,3.7798v3.0996H7.103 c-1.7446,0-3.1641,1.418-3.1641,3.1606v31.6934H3.2139c-0.7354,0-1.4766,0.3774-1.8877,0.9614 c-0.3306,0.4688-0.4141,1.0342-0.231,1.5464l1.248,3.5439c0.4312,1.2227,1.144,1.8428,2.1187,1.8428h55.0762 c0.9746,0,1.6875-0.6201,2.1187-1.8433l1.2461-3.5386C63.0879,50.915,63.0044,50.3496,62.6738,49.8809z M20.855,28.2139h2.8022 v4.3169c0,0.5522,0.4478,1,1,1s1-0.4478,1-1v-4.3169h4.7827v7.2412c0,0.5522,0.4478,1,1,1s1-0.4478,1-1v-7.2412h4.9175v4.3169 c0,0.5522,0.4478,1,1,1s1-0.4478,1-1v-4.3169h2.668c2.084,0,3.7793-1.6958,3.7793-3.7798v-3.7085h7.0503v23.6099h-41.71V20.7256 h5.9268v3.7085C17.0718,26.5181,18.769,28.2139,20.855,28.2139z M21.2932,26.2139l7.6743-7.317l1.8152,1.5826 c0.1885,0.1641,0.4229,0.2461,0.6572,0.2461s0.4692-0.082,0.6577-0.2466l2.1458-1.8724l7.9888,7.5863 c-0.0687,0.0081-0.136,0.0209-0.2068,0.0209H21.2932z M43.6921,10.3619c0.0689,0.1894,0.1126,0.391,0.1126,0.6039v13.4683 c0,0.1516-0.0248,0.2963-0.0606,0.4368l-7.9872-7.5848L43.6921,10.3619z M41.9973,9.186l-10.5578,9.2124L20.8729,9.186H41.9973z M19.0718,10.9658c0-0.2112,0.0435-0.4111,0.1114-0.5992l8.2706,7.2106l-8.1309,7.7523c-0.1555-0.2641-0.251-0.5676-0.251-0.8954 V10.9658z M5.939,17.2261c0-0.6401,0.522-1.1606,1.1641-1.1606h9.9688v2.6602H10.145c-0.5522,0-1,0.4478-1,1v25.6099 c0,0.5522,0.4478,1,1,1h43.71c0.5522,0,1-0.4478,1-1V19.7256c0-0.5522-0.4478-1-1-1h-8.0503v-2.6602H56.897 c0.6421,0,1.1641,0.5205,1.1641,1.1606v31.6934H41.3198c-0.2935,0-0.5718,0.145-0.7617,0.3687s-0.2715,0.5356-0.2241,0.8252 c0,0.2563-0.2163,0.4727-0.4727,0.4727H24.1387c-0.2563,0-0.4727-0.2163-0.4717-0.5044c0.0474-0.29-0.0347-0.5859-0.2246-0.8096 s-0.4688-0.3525-0.7622-0.3525H5.939V17.2261z M59.77,54.3062c-0.1406,0.4004-0.2412,0.5015-0.2349,0.5078H4.48 c-0.0361-0.0381-0.1279-0.1602-0.25-0.5073l-1.1768-3.3403c0.0508-0.0259,0.1118-0.0469,0.1606-0.0469h18.5869 c0.335,0.9688,1.2563,1.6665,2.3379,1.6665h15.7227c1.0815,0,2.0029-0.6978,2.3379-1.6665h18.5869 c0.0488,0,0.1099,0.021,0.1606,0.0469L59.77,54.3062z">
+                                            </path>
+                                        </g>
+                                    </g>
+                                </g>
+                            </svg>
+                        </a>
+
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#authModal" data-bs-toggle="modal" data-bs-target="#authModal">
+                            <svg viewBox="0 0 1024 1024" class="icon" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                fill="#000000" width="50" height="50">
+                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                <g id="SVGRepo_iconCarrier">
+                                    <path
+                                        d="M691.573 338.89c-1.282 109.275-89.055 197.047-198.33 198.331-109.292 1.282-197.065-90.984-198.325-198.331-0.809-68.918-107.758-68.998-106.948 0 1.968 167.591 137.681 303.31 305.272 305.278C660.85 646.136 796.587 503.52 798.521 338.89c0.811-68.998-106.136-68.918-106.948 0z"
+                                        fill="#4A5699"></path>
+                                    <path
+                                        d="M294.918 325.158c1.283-109.272 89.051-197.047 198.325-198.33 109.292-1.283 197.068 90.983 198.33 198.33 0.812 68.919 107.759 68.998 106.948 0C796.555 157.567 660.839 21.842 493.243 19.88c-167.604-1.963-303.341 140.65-305.272 305.278-0.811 68.998 106.139 68.919 106.947 0z"
+                                        fill="#C45FA0"></path>
+                                    <path
+                                        d="M222.324 959.994c0.65-74.688 29.145-144.534 80.868-197.979 53.219-54.995 126.117-84.134 201.904-84.794 74.199-0.646 145.202 29.791 197.979 80.867 54.995 53.219 84.13 126.119 84.79 201.905 0.603 68.932 107.549 68.99 106.947 0-1.857-213.527-176.184-387.865-389.716-389.721-213.551-1.854-387.885 178.986-389.721 389.721-0.601 68.991 106.349 68.933 106.949 0.001z"
+                                        fill="#E5594F"></path>
+                                </g>
+                            </svg>
+                        </a>
+
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Modal de autenticación -->
+    <div class="modal fade" id="authModal" tabindex="-1" aria-labelledby="authModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="authModalLabel">Autenticación</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <ul class="nav nav-tabs" id="authTabs" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="login-tab" data-bs-toggle="tab" data-bs-target="#login"
+                                type="button" role="tab">Iniciar Sesión</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="register-tab" data-bs-toggle="tab" data-bs-target="#register"
+                                type="button" role="tab">Registrarse</button>
+                        </li>
+                    </ul>
+                    <div class="tab-content mt-3" id="authTabsContent">
+                        <div class="tab-pane fade show active" id="login" role="tabpanel">
+                            <form>
+                                <div class="mb-3">
+                                    <label for="loginEmail" class="form-label">Correo electrónico</label>
+                                    <input type="email" class="form-control" id="loginEmail" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="loginPassword" class="form-label">Contraseña</label>
+                                    <input type="password" class="form-control" id="loginPassword" required>
+                                </div>
+                                <button type="submit" class="btn btn-primary w-100">Iniciar Sesión</button>
+                                <p class="text-center">O con tu cuenta de</p>
+                                <a href="github.com "><img src="img/github.png" alt="logo" width="50" height="50"
+                                        class="img-fluid"></a>
+                                <a href="google.com"><img src="img/google.webp" alt="logo" width="50" height="50"
+                                        class="img-fluid"></a>
+                                <a href="facebook.com"><img src="img/facebook.png" alt="logo" width="50" height="50"
+                                        class="img-fluid"></a>
+                            </form>
+                        </div>
+                        <div class="tab-pane fade" id="register" role="tabpanel">
+                            <form>
+                                <div class="mb-3">
+                                    <label for="registerName" class="form-label">Nombre</label>
+                                    <input type="text" class="form-control" id="registerName" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="registerEmail" class="form-label">Correo electrónico</label>
+                                    <input type="email" class="form-control" id="registerEmail" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="registerPassword" class="form-label">Contraseña</label>
+                                    <input type="password" class="form-control" id="registerPassword" required>
+                                </div>
+                                <button type="submit" class="btn btn-success w-100">Registrarse</button>
+                                <p class="text-center">O con tu cuenta de</p>
+                                <a href="github.com "><img src="img/github.png" alt="logo" width="50" height="50"></a>
+                                <a href="google.com"><img src="img/google.webp" alt="logo" width="50" height="50"></a>
+                                <a href="facebook.com"><img src="img/facebook.png" alt="logo" width="50"
+                                        height="50"></a>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Seccion de incio-->
+    <section class="vh-100 d-flex justify-content-center align-items-center text-center">
+        <video autoplay muted loop class="video-background" >
+            <source src="img/videoFondo.mp4" type="video/mp4">
+            Tu navegador no soporta video.
+        </video>
+
+        <div class="content">
+            <h1 class="display-4">Trello trae todas tus tareas, compañeros y herramientas juntos</h1>
+            <p class="lead">Mantén todo en el mismo lugar, incluso si tu equipo no está.</p>
+
+            <!-- Formulario de correo electrónico -->
+            <form class="d-flex justify-content-center mb-3">
+                <input type="email" class="form-control me-2" placeholder="Ingresa tu correo" required>
+                <button type="submit" class="btn btn-custom-new">Regístrate- ¡Es gratis!</button>
+            </form>
+        </div>
+    </section>
+
+
+
+
+
+    <!-- Lista de servicios -->
+
+    <div class="row" id="servicios">
+        <h2 class="text-center mb-4">Servicios</h2>
+        <div class="col-4">
+            <div id="list-example" class="list-group">
+                <a class="list-group-item list-group-item-action" href="#list-item-1"
+                    onclick="showContent('list-item-1')">TABLEROS</a>
+                <a class="list-group-item list-group-item-action" href="#list-item-2"
+                    onclick="showContent('list-item-2')">TARJETAS</a>
+                <a class="list-group-item list-group-item-action" href="#list-item-3"
+                    onclick="showContent('list-item-3')">DETALLE TARJETAS</a>
+                <a class="list-group-item list-group-item-action" href="#list-item-4"
+                    onclick="showContent('list-item-4')">EQUIPO</a>
+            </div>
+        </div>
+        <div class="col-8">
+            <div class="content-container">
+                <div id="list-item-1" class="content-item">
+                    <h4>Tableros</h4>
+                    <p>Los tableros de Trello son herramientas visuales</p>
+                    <p>Los tableros de Trello son herramientas visuales
+                        que permiten organizar tareas, proyectos y colaboraciones
+                        en columnas personalizables. Su interfaz intuitiva facilita
+                        el seguimiento del progreso y la gestión de equipos en tiempo real.</p>
+                </div>
+                </p>
+                <div id="list-item-2" class="content-item" style="display: none;">
+                    <h4>TARJETAS</h4>
+                    <p>Elementos básicos dentro de los tableros y listas de la plataforma. Representan tareas, ideas o
+                        cualquier tipo de información que necesites organizar. Cada tarjeta puede contener
+                        descripciones, checklists, fechas de vencimiento, archivos adjuntos, etiquetas, comentarios y
+                        más, facilitando la gestión de proyectos y el trabajo en equipo.</p>
+                </div>
+                <div id="list-item-3" class="content-item" style="display: none;">
+                    <h4>DETALLE TARJETAS</h4>
+                    <p>Detalle de las tarjetas en Trello se refiere a toda la información y funciones disponibles dentro
+                        de una tarjeta específica.<Al>
+                            <p>Al hacer clic en una tarjeta, puedes ver y editar su contenido, que incluye:</p>
+
+                            <li><strong>Título</strong>: Nombre de la tarjeta que resume la tarea o idea.</li>
+                            <li><strong>Descripción</strong> Breve descripción de la tarea o idea.</li>
+                            <li><strong>Comentarios:</strong> Permiten la comunicación entre los miembros del equipo
+                                dentro de la tarjeta.</li>
+                            <li><strong>Checklists:</strong> Listas de subtareas que ayudan a desglosar la tarea
+                                principal.</li>
+                            <li><strong>Etiquetas:</strong> Colores y nombres personalizables para categorizar tarjetas.
+                            </li>
+                            <li><strong>Fecha de vencimiento:</strong> Permite establecer una deadline y recibir
+                                recordatorios.</li>
+                            <li><strong>Miembros:</strong> Usuarios asignados a la tarjeta para indicar
+                                responsabilidades.</li>
+                            <li><strong>Archivos adjuntos:</strong> Opción de subir documentos, imágenes o enlaces
+                                relacionados.</li>
+                            <li><strong>Power-Ups:</strong> Integraciones con otras aplicaciones como Google Drive,
+                                Slack o automatizaciones avanzadas.</li>
+                            <li><strong>Actividad:</strong> Historial de cambios y comentarios en la tarjeta.</li>
+                </div>
+                <div id="list-item-4" class="content-item" style="display: none;">
+                    <h4>EQUIPO</h4>
+                    <p>Contenido del Item 4...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <div class="container mt-5">
+
+        <div class="row align-items-center">
+            <h2 class="text-center mb-4">Flujo de Trabajo</h2>
+            <!-- Texto Izquierda -->
+            <div class="col-md-6">
+                <div id="text-carousel">
+                    <div class="carousel-text active">
+                        <h2 class="nombreCarrusel">GESTIONES</h2>
+                        <ul>
+                            <li>Gestionar el trabajo a gran escala</li>
+                            <li>Gestion de proyectos</li>
+                            <li>Gestion de equipos</li>
+                            <li>Gestion de plazos</li>
+                            <li>Administrar, completar y rastrear tareas</li>
+
+                        </ul>
+                    </div>
+                    <div class="carousel-text">
+                        <h2 class="nombreCarrusel">REUNIONES</h2>
+                        <ul>
+                            <li>Reuniones de equipo</li>
+                            <li>Reuniones mas productivas y enriquecedoras</li>
+                            <li>Manten las ideas visibles</li>
+                            <li>Colabora con equipos de diferentes departamentos</li>
+                            <li>Viable para equipos de diferentes tamaños</li>
+                        </ul>
+                    </div>
+                    <div class="carousel-text">
+                        <h2 class="nombreCarrusel">INCORPORACION Y RECURSOS</h2>
+                        <ul>
+                            <li>Facilidad de unirse a equipos</li>
+                            <li>Facil visualizacion de tareas pendientes</li>
+                            <li>Recursos y seguimiento de progreso</li>
+                            <li>Ahorro de tiempo</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Carrusel Derecha -->
+            <div class="col-md-6">
+                <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="img/gestiones.png" class="d-block w-100" alt="Imagen 1">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/reuniones.jpg" class="d-block w-100" alt="Imagen 2">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/flujoTrabajo.png" class="d-block w-100" alt="Imagen 3">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Cards -->
+    <div class="container my-5" id="precios">
+        <h2 class="text-center mb-4">Precios de nuestros servicios</h2>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="card pricing-card">
+                    <div class="card-body">
+                        <h5 class="card-title">FREE</h5>
+                        <p class="precio">0.00€</p>
+                        <p class="card-text">Gratuito para hasta 10 colaboradores por espacio de trabajo.</p>
+                        <p>Para personas o equipos que buscan organizar cualquier proyecto.</p>
+                        <a href="#" class="btn btn-primary btn-full">EMPEZAR AHORA MISMO</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card pricing-card">
+                    <div class="card-body">
+                        <h5 class="card-title">STANDARD</h5>
+                        <p class="precio">10.00€</p>
+                        <p class="card-text">Por usuario/mes si se factura anualmente.</p>
+                        <p>Gestionar el trabajo a gran escala</p>
+
+                        <a href="#" class="btn btn-primary btn-full">REGISTRATE</a>
+                        <a href="#" class="more-info">Saber más del plan standard</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card pricing-card">
+                    <div class="card-body">
+                        <h5 class="card-title">PREMIUM</h5>
+                        <p class="precio">15.00€</p>
+                        <p class="card-text">Por usuario/mes si se factura anualmente</p>
+                        <p>Para equipos que necesitan realizar el seguimiento y visualizar múltiples proyectos de varias
+                            maneras, incluidos tableros, cronogramas, calendarios, etc.</p>
+                        <a href="#" class="btn btn-primary btn-full">PROBAR GRATIS</a>
+                        <a href="#" class="more-info">Saber más del plan premium</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card pricing-card">
+                    <div class="card-body">
+                        <h5 class="card-title">ENTERPRISE</h5>
+                        <p class="card-text">Ajusta el número de usuarios para ver el costo total:</p>
+                        <p class="card-text"> En total al mes si se factura anualmente</p>
+                        <p>Para organizaciones que necesitan conectar el trabajo entre equipos con más seguridad y
+                            controles.</p>
+                        <div class="result">
+                            <p class="precio"><span id="totalCost"></span>€</p>
+                        </div>
+                        <input type="range" class="form-range" id="userSlider" min="50" max="500" value="50">
+                        <p>Usuarios: <span id="userCount">50</span></p>
+
+
+                        <a href="#" class="more-info">Saber más del plan enterprise</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Formulario de contacto -->
+    <div class="container mt-5" id="contacto">
+        <div class="card">
+            <div class="card-header text-center">
+                <h2>Formulario de Contacto</h2>
+            </div>
+            <div class="card-body">
+                <form class="needs-validation" novalidate>
+                    <!-- Campo Nombre -->
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Nombre</label>
+                        <input type="text" class="form-control" id="name" name="name" placeholder="Ingresa tu nombre"
+                            required>
+                        <div class="invalid-feedback">
+                            Por favor, ingresa tu nombre.
+                        </div>
+                    </div>
+
+                    <!-- Campo Gmail -->
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Correo Electrónico</label>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="marta@gmail.com"
+                            pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]" required>
+                        <div class="invalid-feedback">
+                            Por favor, ingresa un correo Gmail válido.
+                        </div>
+                    </div>
+
+                    <!-- Campo Número -->
+                    <div class="mb-3">
+                        <label for="phone" class="form-label">Número de Teléfono</label>
+                        <input type="tel" class="form-control" id="phone" name="phone" placeholder="1234567890"
+                            pattern="[0-9]{10}" required>
+                        <div class="invalid-feedback">
+                            Por favor, ingresa un número de teléfono válido (10 dígitos).
+                        </div>
+                    </div>
+
+                    <!-- Campo motivo -->
+                    <div class="mb-3">
+                        <label for="motivo" class="form-label">Motivo</label>
+                        <textarea class="form-control" id="motivo" name="motivo" placeholder="Motivo"
+                            required></textarea>
+                        <div class="invalid-feedback">
+                            Por favor, ingresa un motivo.
+                        </div>
+                    </div>
+
+                    <!-- Botón de Enviar -->
+                    <div class="d-grid">
+                        <button type="submit" class="btn btn-primary">Enviar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+
+            <div class="col-12 d-flex justify-content-start footer-buttons">
+                <button class="btn-footer btn-operations">Operations</button>
+                <button class="btn-footer btn-sales">Sales</button>
+                <button class="btn-footer btn-marketing">Marketing</button>
+                <button class="btn-footer btn-product">Product</button>
+                <button class="btn-footer btn-design">Design</button>
+                <button class="btn-footer btn-engineering">Engineering</button>
+            </div>
+
+
+
+            <div class="row">
+                <!-- Enlaces en la parte inferior -->
+                <div class="col-md-6 footer-links">
+                    <a href="#">About Crello</a>
+                    <a href="#">Jobs</a>
+                    <a href="#">Apps</a>
+                    <a href="#">Contact Us</a>
+                </div>
+
+                <!-- Logo y redes sociales -->
+                <div class="col-md-6 text-md-end footer-logo">
+                    <a href="#"><img src="img/logo.png" alt="Crello Logo"></a>
+                    <div>
+                        <a href="https://www.instagram.com/crello._mml/" class="me-3">
+                            <svg viewBox="0 -0.5 25 25" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#DC8AAF"
+                                width="50" height="50">
+                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                <g id="SVGRepo_iconCarrier">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M15.5 5H9.5C7.29086 5 5.5 6.79086 5.5 9V15C5.5 17.2091 7.29086 19 9.5 19H15.5C17.7091 19 19.5 17.2091 19.5 15V9C19.5 6.79086 17.7091 5 15.5 5Z"
+                                        stroke="#DC8AAF" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round"></path>
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M12.5 15C10.8431 15 9.5 13.6569 9.5 12C9.5 10.3431 10.8431 9 12.5 9C14.1569 9 15.5 10.3431 15.5 12C15.5 12.7956 15.1839 13.5587 14.6213 14.1213C14.0587 14.6839 13.2956 15 12.5 15Z"
+                                        stroke="#DC8AAF" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round"></path>
+                                    <rect x="15.5" y="9" width="2" height="2" rx="1" transform="rotate(-90 15.5 9)"
+                                        fill="#DC8AAF"></rect>
+                                    <rect x="16" y="8.5" width="1" height="1" rx="0.5" transform="rotate(-90 16 8.5)"
+                                        stroke="#DC8AAF" stroke-linecap="round"></rect>
+                                </g>
+                            </svg></a>
+                        <a href="#" class="me-3">
+                            <svg viewBox="0 0 1024 1024" class="icon" version="1.1" width="50" height="50"
+                                xmlns="http://www.w3.org/2000/svg" fill="#000000">
+                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+
+
+                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                <g id="SVGRepo_iconCarrier">
+                                    <path
+                                        d="M715.637 960h171.897C920.348 960 960 932.759 960 898.909V125.091C960 91.243 920.348 64 887.534 64H113.716C77.004 64 64 96.892 64 125.091v773.818C64 927.109 77.004 960 113.716 960h439.012V634.182H410.181c-11.257 0-20.363-9.106-20.363-20.363V491.637c0-11.257 9.106-20.365 20.363-20.365h142.546V328.728c0-99.354 88.056-183.272 192.261-183.272h113.193c11.257 0 20.365 9.106 20.365 20.363V288c0 11.258-9.108 20.365-20.365 20.365h-72.465c-34.444 0-70.079 19.052-70.079 50.908v112h131.17a20.27 20.27 0 0 1 16.507 8.472c3.856 5.291 4.891 12.133 2.823 18.337l-40.728 122.181a20.403 20.403 0 0 1-19.33 13.919h-90.442V960z"
+                                        fill="#DC8AAF"></path>
+                                    <path
+                                        d="M807.708 451.723h-92.071v19.549h112.288c-0.161-3.938-1.326-7.809-3.711-11.078a20.263 20.263 0 0 0-16.506-8.471zM513.629 940.451H75.445C83.3 951.952 95.599 960 113.716 960h439.012V634.183H513.63v306.268zM839.283 145.456c-0.451-10.855-9.231-19.549-20.198-19.549H705.89c-104.205 0-192.261 83.919-192.261 183.272v142.544H371.083c-11.257 0-20.363 9.108-20.363 20.365v122.181c0 11.258 9.107 20.364 20.363 20.364h18.899c-0.012-0.286-0.164-0.527-0.164-0.815V491.637c0-11.257 9.106-20.365 20.363-20.365h142.546V328.728c0-99.353 88.056-183.272 192.261-183.272h94.295z"
+                                        fill=""></path>
+                                    <path
+                                        d="M900.123 65.251c12.221 10.76 20.778 24.748 20.778 40.29V879.36c0 33.85-39.651 61.091-72.467 61.091H715.637V960h171.896C920.348 960 960 932.759 960 898.909V125.091c0-29.6-30.322-54.141-59.877-59.84z"
+                                        fill=""></path>
+                                </g>
+                            </svg></a>
+                        <a href="https://x.com/crello._mml" class="me-3">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" width="50"
+                                height="50">
+                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                <g id="SVGRepo_iconCarrier">
+                                    <path
+                                        d="M21.9999 5.9246C21.2644 6.25051 20.4744 6.47071 19.6437 6.57025C20.4911 6.06289 21.1411 5.25782 21.4477 4.29948C20.6549 4.76984 19.7767 5.1116 18.8422 5.29481C18.0935 4.49855 17.0277 4 15.8474 4C13.5819 4 11.7445 5.8374 11.7445 8.10464C11.7445 8.42526 11.7815 8.73707 11.8502 9.03832C8.43877 8.86656 5.41666 7.23263 3.39252 4.75046C3.04019 5.35823 2.8376 6.06289 2.8376 6.81335C2.8376 8.23677 3.56252 9.4937 4.66267 10.2292C3.98972 10.2072 3.35729 10.0231 2.80413 9.71567V9.76852C2.80413 11.7565 4.21786 13.4151 6.09577 13.7921C5.75049 13.8855 5.38847 13.9348 5.015 13.9348C4.75075 13.9348 4.49267 13.9102 4.24252 13.8626C4.76485 15.4921 6.27987 16.6795 8.07587 16.7112C6.67095 17.8122 4.90137 18.4684 2.97942 18.4684C2.64823 18.4684 2.32144 18.449 1.99994 18.4112C3.8162 19.5765 5.97246 20.2547 8.28903 20.2547C15.8377 20.2547 19.9644 14.0026 19.9644 8.58029C19.9644 8.40412 19.9599 8.2262 19.952 8.05003C20.7536 7.47045 21.4494 6.74905 21.9982 5.92724L21.9999 5.9246Z"
+                                        stroke="#DC8AAF" stroke-linejoin="round"></path>
+                                </g>
+                            </svg>
+                        </a>
+                        <a href="#"><svg height="50" width="50" version="1.1" id="_x35_"
+                                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                viewBox="0 0 512 512" xml:space="preserve" fill="#000000">
+                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                <g id="SVGRepo_iconCarrier">
+                                    <g>
+                                        <g>
+                                            <path style="fill:#dc8aaf;"
+                                                d="M497.949,374.11c-80.764,7.083-161.788,10.624-242.726,10.624c-8.984,0-18.054-0.086-27.037-0.172 c-11.229-0.086-22.459-0.346-33.602-0.519c-7.601-0.172-15.289-0.345-22.977-0.604c-19.954-0.605-39.907-1.469-59.861-2.505 c-6.133-0.345-12.353-0.691-18.485-1.036c-7.774-0.432-15.548-0.95-23.323-1.468c-12.698-0.864-25.396-1.814-38.093-2.851 c-5.96-0.432-11.834-0.95-17.794-1.468c-0.951-6.392-1.901-12.698-2.764-19.09C-4.606,240.395-3.743,125.078,14.052,10.626 C156.578-1.899,299.536-3.368,442.061,6.307c11.316,0.778,22.631,1.641,33.947,2.505c7.342,0.604,14.598,1.209,21.94,1.814 c1.209,7.861,2.332,15.635,3.369,23.496C516.607,147.278,515.484,261.126,497.949,374.11z">
+                                            </path>
+                                        </g>
+                                        <g>
+                                            <path style="fill:#FFFFFF;"
+                                                d="M341.126,192.368c-0.056,0.107-0.113,0.215-0.169,0.322 c-28.533,54.742-92.342,92.073-158.407,92.073c0-51.07,0-133.721,0-184.791c66.066,0,129.875,37.332,158.407,92.073 C341.014,192.153,341.07,192.261,341.126,192.368z">
+                                            </path>
+                                            <path style="fill:#EAEAEA;"
+                                                d="M341.126,192.368c-0.056-0.107-0.113-0.215-0.169-0.322 c-28.533-54.742-92.342-92.073-158.407-92.073c0,7.145,0,14.956,0,23.165c61.299,1.529,119.954,34.866,149.574,84.139 c3.194-4.723,6.21-9.553,8.833-14.585C341.014,192.583,341.07,192.476,341.126,192.368z">
+                                            </path>
+                                        </g>
+                                        <path style="opacity:0.08;fill:#090808;"
+                                            d="M497.949,374.11c-80.764,7.083-161.788,10.624-242.726,10.624 c-8.984,0-18.054-0.086-27.037-0.172c-11.229-0.086-22.459-0.346-33.602-0.519c-7.601-0.172-15.289-0.345-22.977-0.604 c-19.954-0.605-39.907-1.469-59.861-2.505c-6.133-0.345-12.353-0.691-18.485-1.036c-7.774-0.432-15.548-0.95-23.323-1.468 L442.061,6.307c11.316,0.778,22.631,1.641,33.947,2.505c7.342,0.604,14.598,1.209,21.94,1.814 c1.209,7.861,2.332,15.635,3.369,23.496C516.607,147.278,515.484,261.126,497.949,374.11z">
+                                        </path>
+                                    </g>
+                                </g>
+                            </svg></a>
+                        &copy; 2025 Crello - Todos los derechos reservados.
+                        Found on <a href="https://github.com/martaaml/">
+                            <svg viewBox="0 0 48 48" id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg"
+                                fill="#DC8AAF" stroke="#DC8AAF" width="50" height="50">
+                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                <g id="SVGRepo_iconCarrier">
+                                    <defs>
+                                        <style>
+                                            .cls-1 {
+                                                fill: none;
+                                                stroke: #DC8AAF;
+                                                stroke-linecap: round;
+                                                stroke-linejoin: round;
+                                                fill-rule: evenodd;
+                                            }
+                                        </style>
+                                    </defs>
+                                    <path class="cls-1"
+                                        d="M24,2.5a21.5,21.5,0,0,0-6.8,41.9c1.08.2,1.47-.46,1.47-1s0-1.86,0-3.65c-6,1.3-7.24-2.88-7.24-2.88A5.7,5.7,0,0,0,9,33.68c-1.95-1.33.15-1.31.15-1.31a4.52,4.52,0,0,1,3.29,2.22c1.92,3.29,5,2.34,6.26,1.79a4.61,4.61,0,0,1,1.37-2.88c-4.78-.54-9.8-2.38-9.8-10.62a8.29,8.29,0,0,1,2.22-5.77,7.68,7.68,0,0,1,.21-5.69s1.8-.58,5.91,2.2a20.46,20.46,0,0,1,10.76,0c4.11-2.78,5.91-2.2,5.91-2.2a7.74,7.74,0,0,1,.21,5.69,8.28,8.28,0,0,1,2.21,5.77c0,8.26-5,10.07-9.81,10.61a5.12,5.12,0,0,1,1.46,4c0,2.87,0,5.19,0,5.9s.39,1.24,1.48,1A21.5,21.5,0,0,0,24,2.5">
+                                    </path>
+                                </g>
+                            </svg></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,747 @@
+header{
+    background-color: transparent;
+}
+
+@media (min-width: 768px) {
+  /* Añadir margen superior para evitar que el contenido quede tapado por el navbar */
+body {
+  padding-top: 70px; /* Ajusta este valor según el alto de tu navbar */
+}
+
+/* Si el navbar tiene un alto de 70px, usa ese valor para el margen */
+#servicios, #precios, #pruebalo, #contacto, #authModal {
+  padding-top: 30px; /* Ajuste adicional si es necesario */
+}
+    .navbar-nav .nav-link {
+        padding-right: .5rem;
+        padding-left: .5rem;
+        color: #71d0d9;
+        background-color: transparent;
+    }
+    .list-group {
+        background-color: #f0f8ff;
+        border-radius: 10px;
+        padding: 10px;
+      }
+    
+      .list-group-item {
+        color: #333;
+        background-color: #e6f7ff;
+        border: 1px solid #b3d8ff;
+        margin-bottom: 5px;
+        border-radius: 5px;
+        transition: background-color 0.3s, transform 0.2s;
+      }
+    
+      .list-group-item:hover {
+        background-color: #cceeff;
+        transform: scale(1.05);
+      }
+    
+      .content-container {
+        padding: 20px;
+        border: 2px solid #b3d8ff;
+        border-radius: 15px;
+        background: linear-gradient(135deg, #e6f7ff, #f0f8ff);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+    
+      .content-item {
+        padding: 15px;
+        background-color: #ffffff;
+        border: 1px solid #e0e0e0;
+        border-radius: 10px;
+        box-shadow: 0 2px 4px rgba(189, 50, 50, 0.1);
+        position: relative;
+      }
+    
+      .content-item h4 {
+        color: #007acc;
+        border-bottom: 2px solid #b3d8ff;
+        padding-bottom: 5px;
+        margin-bottom: 15px;
+      }
+    
+      .content-item pre, .content-item p {
+        font-family: 'Arial', sans-serif;
+        font-size: 1rem;
+        line-height: 1.6;
+        color: #555;
+      }
+    
+      .background-image {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 100px;
+
+        background-size: cover;
+        border-top: 1px solid #e0e0e0;
+        border-radius: 0 0 10px 10px;
+      }
+/*ESTILO PARA EL CAMPO DE PRECIO*/
+      p.precio{
+        font-size: 2rem;
+        font-weight: bold;
+        color: green;
+        text-align: center;
+      }
+      p.card-text{
+        font-size: 0.7rem;
+        text-align: center;
+        color: black;
+        font-weight: bold;
+      }
+    
+#precios .card {
+  transition: transform 0.3s ease, filter 0.3s ease;
+  filter: blur(0); /* Sin difuminado al principio */
+}
+
+#precios .card:hover {
+  transform: scale(1.1); /* Aumenta el tamaño de la tarjeta */
+  filter: blur(0); /* Mantiene la tarjeta enfocada */
+}
+
+#precios .card:hover ~ .col-md-3 .card {
+  filter: blur(3px); /* Difumina las demás tarjetas */
+}
+
+#precios .card-body {
+  transition: opacity 0.3s ease;
+  opacity: 7; /* Inicialmente, la opacidad es 0 */
+}
+
+#precios .card:hover .card-body {
+  opacity: 7; /* Mantiene la opacidad cuando se pasa el cursor */
+}
+
+#precios .card-body {
+  opacity: 0.5;/* Reduce la opacidad de las tarjetas no activas */
+}
+
+#precios .row {
+  display: flex;
+  justify-content: space-between;
+}
+
+#precios .card {
+  position: relative;
+}
+
+#precios .col-md-3 {
+  position: relative;
+  z-index: 1;
+}
+
+#precios .card:hover {
+  z-index: 10;
+}
+
+/* Estilos para el carrusel y el texto */
+.carousel-item {
+  min-height: 300px;
+}
+
+.carousel-inner img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* Ocultar todos los textos excepto el activo */
+.carousel-text {
+  display: none;
+}
+
+.carousel-text.active {
+  display: block;
+}
+.modal-content {
+  border-radius: 10px;
+}
+
+.nombreCarrusel{
+  color: #24558a;
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+
+}
+/* Estilos para el modal de autenticación */
+
+.modal-header {
+  background-color: #8a2481;
+  color: rgb(255, 255, 255);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+/* Contenedor principal */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 30px;
+}
+
+/* Estilo para la tarjeta */
+.card {
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: #f9f9f9;
+}
+
+/* Cabecera de la tarjeta */
+.card-header {
+  background-color: #b630b9;
+  color: white;
+  padding: 20px;
+  border-radius: 15px 15px 0 0;
+}
+
+.card-header h2 {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  font-weight: bold;
+}
+
+/* Estilos para el formulario */
+.form-label {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.form-control {
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  padding: 12px;
+  font-size: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Efecto cuando el campo está en foco */
+.form-control:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Mensajes de error */
+.invalid-feedback {
+  font-size: 0.9rem;
+  color: #e74c3c;
+}
+
+/* Estilo para el textarea */
+textarea.form-control {
+  resize: vertical;
+  min-height: 100px;
+}
+
+/* Botón de enviar */
+.btn {
+  background-color: #dd00ffcf;
+  color: white;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  padding: 12px;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #7400b3;
+}
+
+/* Espaciado entre los campos */
+.mb-3 {
+  margin-bottom: 20px;
+}
+
+/* Botón de enviar en el centro */
+.d-grid {
+  margin-top: 20px;
+}
+
+/*Estilos del footer*/
+footer {
+  background-color: #1a1d2e;
+  color: white;
+  padding: 40px 0;
+}
+
+.footer-links a {
+  color: #f8f9fa;
+  margin-right: 20px;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.footer-buttons button {
+  margin-right: 10px;
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+.footer-buttons button:hover {
+  background-color: #5b5f6e;
+}
+
+.footer-logo img {
+  max-height: 40px;
+}
+
+/* Fondo de la sección */
+.footer-buttons {
+  background-image: url('img/imagen1.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 50px 20px;
+  position: relative;
+  height: 400px; /* Ajusta la altura a tus necesidades */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Estilo base para los botones */
+.btn-footer {
+  padding: 12px 30px;
+  border: none;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Colores personalizados para cada botón */
+.btn-operations {
+  background-color: #FF5733;
+}
+
+.btn-sales {
+  background-color: #33C1FF;
+}
+
+.btn-marketing {
+  background-color: #9B59B6;
+}
+
+.btn-product {
+  background-color: #2ECC71;
+}
+
+.btn-design {
+  background-color: #F39C12;
+}
+
+.btn-engineering {
+  background-color: #E74C3C;
+}
+
+/* Efecto cuando el mouse pasa sobre el botón */
+.btn-footer:hover {
+  opacity: 0.8;
+  transform: scale(1.05);
+}
+
+/* Estilo para la distribución de los botones en diferentes posiciones */
+.footer-buttons .btn-footer:nth-child(1) {
+  position: absolute;
+  top: 20%;
+  left: 10%;
+}
+
+.footer-buttons .btn-footer:nth-child(2) {
+  position: absolute;
+  top: 30%;
+  left: 30%;
+}
+
+.footer-buttons .btn-footer:nth-child(3) {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+}
+
+.footer-buttons .btn-footer:nth-child(4) {
+  position: absolute;
+  top: 50%;
+  left: 70%;
+}
+
+.footer-buttons .btn-footer:nth-child(5) {
+  position: absolute;
+  top: 60%;
+  left: 15%;
+}
+
+.footer-buttons .btn-footer:nth-child(6) {
+  position: absolute;
+  top: 70%;
+  left: 55%;
+}
+
+}
+
+
+@media (max-width: 768px) {
+.content-container {
+  max-width: 100%;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.content-container p {
+  white-space: normal;
+  word-break: break-word;
+}
+    /* Añadir margen superior para evitar que el contenido quede tapado por el navbar */
+body {
+  padding-top: 70px; /* Ajusta este valor según el alto de tu navbar */
+}
+
+/* Si el navbar tiene un alto de 70px, usa ese valor para el margen */
+#servicios, #precios, #pruebalo, #contacto, #authModal {
+  padding-top: 30px; /* Ajuste adicional si es necesario */
+}
+    .navbar-nav .nav-link {
+        padding-right: .5rem;
+        padding-left: .5rem;
+        background-color: pink;
+    }
+    header {
+        background-color: pink;
+    }
+    body{
+        background-color: pink;
+        color: black;
+    }
+    .list-group {
+        background-color: #f0f8ff;
+        border-radius: 10px;
+        padding: 10px;
+      }
+    
+      .list-group-item {
+        color: #333;
+        background-color: #e6f7ff;
+        border: 1px solid #b3d8ff;
+        margin-bottom: 5px;
+        border-radius: 5px;
+        transition: background-color 0.3s, transform 0.2s;
+      }
+    
+      .list-group-item:hover {
+        background-color: #cceeff;
+        transform: scale(1.05);
+      }
+    
+      .content-container {
+        padding: 20px;
+        border: 2px solid #b3d8ff;
+        border-radius: 15px;
+        background: linear-gradient(135deg, #e6f7ff, #f0f8ff);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+    
+      .content-item {
+        padding: 15px;
+        background-color: #ffffff;
+        border: 1px solid #e0e0e0;
+        border-radius: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+    
+      .content-item h4 {
+        color: #4786b0;
+        border-bottom: 2px solid #b3d8ff;
+        padding-bottom: 5px;
+        margin-bottom: 15px;
+      }
+    
+      .content-item pre, .content-item p {
+        font-family: 'Arial', sans-serif;
+        font-size: 1rem;
+        line-height: 1.6;
+        color: #555;
+      }
+      /*CARRUSEL DE IMAGEN Y TEXTO*/
+      .carousel-item {
+          min-height: 300px;
+      }
+      .carousel-inner img {
+          object-fit: cover;
+          height: 100%;
+          width: 100%;
+          border-radius: 10px;
+      }
+          /* Ocultar todos los textos excepto el activo */
+    .carousel-text {
+      display: none;
+  }
+  .carousel-text.active {
+      display: block;
+  } 
+      /*ESTILO PARA EL CAMPO DE PRECIO*/
+      p.precio{
+        font-size: 2rem;
+        font-weight: bold;
+        color: green;
+        text-align: center;
+      }
+      p.card-text{
+        font-size: 0.7rem;
+        text-align: center;
+        color: rgb(25, 25, 65);
+        font-weight: bold;
+      }
+
+#precios .card {
+transition: transform 0.3s ease, filter 0.3s ease;
+filter: blur(0); /* Sin difuminado al principio */
+}
+
+#precios .card:hover {
+transform: scale(1.1); /* Aumenta el tamaño de la tarjeta */
+filter: blur(0); /* Mantiene la tarjeta enfocada */
+}
+
+#precios .card:hover ~ .col-md-3 .card {
+filter: blur(3px); /* Difumina las demás tarjetas */
+}
+
+#precios .card-body {
+transition: opacity 0.3s ease;
+opacity: 7; /* Inicialmente, la opacidad es 0 */
+}
+
+#precios .card:hover .card-body {
+opacity: 7; /* Mantiene la opacidad cuando se pasa el cursor */
+}
+
+#precios .card-body {
+opacity: 0.5;/* Reduce la opacidad de las tarjetas no activas */
+}
+
+#precios .row {
+display: flex;
+justify-content: space-between;
+}
+
+#precios .card {
+position: relative;
+}
+
+#precios .col-md-3 {
+position: relative;
+z-index: 1;
+}
+
+#precios .card:hover {
+z-index: 10;
+}
+
+
+      .modal-content {
+        border-radius: 10px;
+      }
+      
+      .nombreCarrusel{
+        color: #4e248a;
+        font-size: 2rem;
+        font-weight: bold;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+      
+      }
+      /* Estilos para el modal de autenticación */
+      
+      .modal-header {
+        background-color: #24558a;
+        color: white;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+      }
+/*Estilo contacto*/
+
+
+
+/*Estilos del footer*/
+footer {
+  padding: 20px 0;
+}
+
+/* Botones en una sola columna para pantallas pequeñas */
+.footer-buttons {
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.footer-buttons .btn {
+  margin: 5px 0;
+  width: 100%;
+}
+
+/* Los enlaces en el footer se alinean en el centro */
+.footer-links {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.footer-logo {
+  text-align: center;
+}
+
+/* Reducir el tamaño del logo */
+.footer-logo img {
+  max-height: 30px;
+}
+
+/* Ajuste de las redes sociales */
+.footer-logo div {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.footer-logo div a {
+  margin: 0 
+  10px;
+}
+
+  /* Ajustar el tamaño de los botones */
+  .btn-footer {
+    padding: 10px 20px;
+    font-size: 14px;
+}
+
+/* Fondo más pequeño en pantallas pequeñas */
+.footer-buttons {
+    height: auto; /* Permitir que la altura se ajuste */
+    padding: 30px 10px;
+}
+
+/* Alinear los botones en una sola columna */
+.footer-buttons .btn-footer {
+    position: static;
+    display: block;
+    width: 80%;
+    margin: 10px auto; /* Centramos los botones */
+}
+
+/* Redefinir el fondo para que cubra completamente */
+.footer-buttons {
+    background-size: contain;
+}
+
+}
+
+
+
+/*CARD PRECIOS*/
+/* Asegurar que todas las tarjetas tengan la misma altura */
+/* Hacer que todas las tarjetas tengan la misma altura */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Asegurar que cada columna tenga la misma altura */
+.col-md-3 {
+  display: flex;
+}
+
+/* Asegurar que todas las tarjetas ocupen la altura completa */
+.pricing-card {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  height: 100%;
+}
+
+/* Hacer que el contenido dentro de la tarjeta ocupe todo el espacio disponible */
+.pricing-card .card-body {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: space-between;
+  height: 100%;
+}
+
+/* Forzar que los botones ocupen todo el ancho */
+.btn-full {
+  width: 100%;
+  margin-top: auto;
+}
+
+/* Mantener el espacio para los enlaces */
+.more-info {
+  display: block;
+  margin-top: 10px;
+  font-size: 14px;
+  text-decoration: none;
+  color: #3b89dc;
+}
+
+.more-info:hover {
+  text-decoration: underline;
+}
+
+/*Formulario login y registro, alinear fotos de logos*/
+
+.img-fluid {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  align-items: center;
+  justify-content: center;
+  display: column;
+  align-items: center;
+  row-gap: 10px;
+  column-gap: 10px;
+}
+
+.video-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  color: white;
+  padding: 20px;
+}
+
+.btn-custom-new {
+  background-color: #007bff;
+  color: white;
+}
+
+.btn-light-custom-new {
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+.additional-buttons {
+  margin-top: 20px;
+}
+
