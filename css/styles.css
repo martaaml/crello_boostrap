@@ -104,7 +104,7 @@ body {
       /* Estilo para el foco, para mejorar la accesibilidad */
       .btn-custom-new:focus {
         outline: none; /* Elimina el borde de enfoque predeterminado */
-        box-shadow: 10px 10px 10px rgba(255, 20, 147, 0.8); /* Sombra visible al hacer clic en el botón */
+        box-shadow: 10px 10px 10px rgba(20, 71, 255, 0.8); /* Sombra visible al hacer clic en el botón */
       }
       p.precio{
         font-size: 2rem;
@@ -198,7 +198,7 @@ body {
 /* Estilos para el modal de autenticación */
 
 .modal-header {
-  background-color: #8a2481;
+  background-color: #19b1c9d8;
   color: rgb(255, 255, 255);
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
@@ -252,8 +252,8 @@ body {
 
 /* Efecto cuando el campo está en foco */
 .form-control:focus {
-  border-color: #007bff;
-  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  border-color:   #007bff;
+  box-shadow: 0 0 5px rgba(62, 131, 205, 0.5);
 }
 
 /* Mensajes de error */
@@ -266,6 +266,9 @@ body {
 textarea.form-control {
   resize: vertical;
   min-height: 100px;
+  max-height: 200px;
+  border-color: red solid 5px;
+  background-color: rgba(188, 52, 27, 0.544);
 }
 
 /* Botón de enviar */
@@ -326,8 +329,16 @@ footer {
 }
 
 /* Fondo de la sección */
-.footer-buttons {
-  background-image: url('img/imagen1.jpg');
+.botones-seccion{
+  background-image: url('../img/degradado1.png');
+  background-size: cover;
+  padding: 50px 20px;
+  position: relative; 
+  height: 400px; /* Ajusta la altura a tus necesidades */
+  display: flex;
+  justify-content: space-between;
+}
+.fun-bottom {
   background-size: cover;
   background-position: center;
   padding: 50px 20px;
@@ -339,7 +350,7 @@ footer {
 }
 
 /* Estilo base para los botones */
-.btn-footer {
+.btn-po {
   padding: 12px 30px;
   border: none;
   color: white;
@@ -351,27 +362,27 @@ footer {
 
 /* Colores personalizados para cada botón */
 .btn-operations {
-  background-color: #FF5733;
+  background-color: #ff583371;
 }
 
 .btn-sales {
-  background-color: #33C1FF;
+  background-color: #185e7c88;
 }
 
 .btn-marketing {
-  background-color: #9B59B6;
+  background-color: #9c59b6a6;
 }
 
 .btn-product {
-  background-color: #2ECC71;
+  background-color: #2b5f419b;
 }
 
 .btn-design {
-  background-color: #F39C12;
+  background-color: #f39d129a;
 }
 
 .btn-engineering {
-  background-color: #E74C3C;
+  background-color: #e90a0a63;
 }
 
 /* Efecto cuando el mouse pasa sobre el botón */
@@ -381,37 +392,38 @@ footer {
 }
 
 /* Estilo para la distribución de los botones en diferentes posiciones */
-.footer-buttons .btn-footer:nth-child(1) {
+/*Distribucion de operaciones*/
+.fun-bottom .btn-po:nth-child(1) {
   position: absolute;
   top: 20%;
-  left: 10%;
-}
-
-.footer-buttons .btn-footer:nth-child(2) {
-  position: absolute;
-  top: 30%;
   left: 30%;
 }
-
-.footer-buttons .btn-footer:nth-child(3) {
+/*Distribucion de ventas*/
+.fun-bottom .btn-po:nth-child(2) {
   position: absolute;
-  top: 40%;
+  top: 30%;
+  left: 20%;
+}
+/*Distribucion de marketing*/
+.fun-bottom .btn-po:nth-child(3) {
+  position: absolute;
+  top: 20%;
   left: 50%;
 }
 
-.footer-buttons .btn-footer:nth-child(4) {
+.fun-bottom .btn-po:nth-child(4) {
   position: absolute;
   top: 50%;
   left: 70%;
 }
 
-.footer-buttons .btn-footer:nth-child(5) {
+.fun-bottom .btn-po:nth-child(5) {
   position: absolute;
   top: 60%;
-  left: 15%;
+  left: 100%;
 }
 
-.footer-buttons .btn-footer:nth-child(6) {
+.fun-bottom .btn-po:nth-child(6) {
   position: absolute;
   top: 70%;
   left: 55%;
@@ -607,13 +619,13 @@ footer {
 }
 
 /* Botones en una sola columna para pantallas pequeñas */
-.footer-buttons {
+.fun-bottom {
   flex-direction: column;
   align-items: center;
   margin-bottom: 20px;
 }
 
-.footer-buttons .btn {
+.fun-bottom .btn {
   margin: 5px 0;
   width: 100%;
 }
@@ -645,19 +657,19 @@ footer {
 }
 
   /* Ajustar el tamaño de los botones */
-  .btn-footer {
+  .fun-bottom .btn {
     padding: 10px 20px;
     font-size: 14px;
 }
 
 /* Fondo más pequeño en pantallas pequeñas */
-.footer-buttons {
+.fun-bottom {
     height: auto; /* Permitir que la altura se ajuste */
     padding: 30px 10px;
 }
 
 /* Alinear los botones en una sola columna */
-.footer-buttons .btn-footer {
+.fun-bottom .btn-po {
     position: static;
     display: block;
     width: 80%;
@@ -665,8 +677,18 @@ footer {
 }
 
 /* Redefinir el fondo para que cubra completamente */
-.footer-buttons {
+.fun-bottom {
     background-size: contain;
+}
+
+.botones-seccion{
+  background-image: url('../img/degradado1.png');
+  background-size: cover;
+  padding: 50px 20px;
+  position: relative; 
+  height: 400px; /* Ajusta la altura a tus necesidades */
+  display: flex;
+  justify-content: space-between;
 }
 
 }
@@ -780,5 +802,5 @@ footer {
   font-weight: bold;
   font-family: Georgia, 'Times New Roman', Times, serif;
   background-attachment: fixed;
-  background-color: rgba(216, 41, 158, 0.5); /* Fondo magenta con 50% de transparencia */
+  background-color: rgba(150, 163, 231, 0.5); /* Fondo magenta con 50% de transparencia */
 }
